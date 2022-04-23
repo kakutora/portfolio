@@ -361,7 +361,7 @@ body {
 }
 .skill .skill_title {
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -419,7 +419,7 @@ body {
 }
 .work .work_title {
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -437,6 +437,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 100px;
+}
+.work .work_boxes .work_box:nth-of-type(even) {
+  flex-direction: row-reverse;
 }
 .work .work_boxes .work_box section {
   display: flex;

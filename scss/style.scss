@@ -197,7 +197,7 @@ body {
 
     .skill_title {
         text-align: center;
-        font-size: 60px;
+        font-size: 40px;
         font-weight: normal;
         letter-spacing: 2px;
 
@@ -263,7 +263,7 @@ body {
 
     .work_title {
         text-align: center;
-        font-size: 60px;
+        font-size: 40px;
         font-weight: normal;
         letter-spacing: 2px;
 
@@ -283,6 +283,10 @@ body {
             justify-content: center;
             align-items: center;
             gap: 100px;
+
+            &:nth-of-type(even) {
+                flex-direction: row-reverse;
+            }
 
             section {
                 display: flex;
