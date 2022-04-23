@@ -32,24 +32,30 @@ VANTA.DOTS({
   spacing: 50.00
 });
 
-if (window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
+const vantaDark = function () {
   document.querySelector('#bg-animation-light').style.display = 'none';
   document.querySelector('#bg-animation-dark').style.display = 'block';
-  darkModeChanger();
-} else {
+};
+
+const vantaLight = function () {
   document.querySelector('#bg-animation-dark').style.display = 'none';
   document.querySelector('#bg-animation-light').style.display = 'block';
+};
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
+  vantaDark();
+  darkModeChanger();
+} else {
+  vantaLight();
   lightModeChanger();
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
   if (e.matches) {
-    document.querySelector('#bg-animation-light').style.display = 'none';
-    document.querySelector('#bg-animation-dark').style.display = 'block';
+    vantaDark();
     darkModeChanger();
   } else {
-    document.querySelector('#bg-animation-dark').style.display = 'none';
-    document.querySelector('#bg-animation-light').style.display = 'block';
+    vantaLight();
     lightModeChanger();
   }
 });

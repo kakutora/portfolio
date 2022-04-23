@@ -1,4 +1,4 @@
-@use "base" as base;
+@use "base"as base;
 @use "mixin";
 @use "variables"as v;
 @use "js/js";
@@ -12,12 +12,27 @@ body {
     font-family: 'GenShinGothic';
     background: v.$lightMode-Color-Reverse;
     color: v.$lightMode-Color;
-    
+
     @media (prefers-color-scheme: dark) {
         background: v.$darkMode-Color-Reverse;
         color: v.$darkMode-Color;
     }
-    
+
+}
+
+.changeColorBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 0;
+    background: #191919;
+    img{
+        width: 50%;
+    }
 }
 
 .headerMenu {
@@ -144,12 +159,12 @@ body {
                 color: v.$default-Color-Red;
             }
 
-            
+
             @media (prefers-color-scheme: dark) {
                 border-bottom: 2px solid v.$darkMode-Color;
                 border-left: 2px solid v.$darkMode-Color;
             }
-            
+
         }
 
         dd {
@@ -161,7 +176,7 @@ body {
             border-bottom: 2px solid #000000;
             border-left: 2px solid #000000;
 
-            
+
             @media (prefers-color-scheme: dark) {
                 border-bottom: 2px solid v.$darkMode-Color;
                 border-left: 2px solid v.$darkMode-Color;
@@ -195,12 +210,12 @@ body {
         margin: 50px auto 0;
         border-right: 6px solid v.$lightMode-Color;
         border-bottom: 6px solid v.$lightMode-Color;
-        
+
         @media (prefers-color-scheme: dark) {
             border-right: 6px solid v.$lightMode-Color-Reverse;
             border-bottom: 6px solid v.$lightMode-Color-Reverse;
         }
-        
+
     }
 
     .skill_list1 {
@@ -325,11 +340,11 @@ footer {
         background: v.$darkMode-Color-Reverse;
         color: v.$lightMode-Color-Reverse;
 
-        
+
         @media (prefers-color-scheme: dark) {
             background: v.$lightMode-Color-Reverse;
         }
-        
+
 
         li {
             font-size: 20px;
@@ -338,16 +353,16 @@ footer {
             a {
                 &:link {
                     color: v.$lightMode-Color-Reverse;
-                    
+
                     @media (prefers-color-scheme: dark) {
                         color: v.$darkMode-Color-Reverse;
                     }
-                    
+
 
                 }
             }
 
-            
+
             @media (prefers-color-scheme: dark) {
                 color: v.$darkMode-Color-Reverse;
             }

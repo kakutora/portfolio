@@ -42,6 +42,7 @@ const TextWave = document.querySelectorAll('.a-TextWave');
 window.addEventListener('DOMContentLoaded', Wave());
 
 async function Wave() {
+    
     await new Promise(function (resolve, reject) {
         TextWave.forEach(function (value) {
             new SpanWrap(value);
@@ -115,10 +116,14 @@ const lightModeChanger = function () {
     document.querySelector('body').classList.remove('js-ChangeColor-body');
     document.querySelector('.self_overview').classList.remove('js-ChangeColor-self_ovewview');
     document.querySelector('.skill_openButton').classList.remove('js-ChangeColor-skill_openButton');
+    document.querySelector('.changeColorBtn').classList.remove('js-ChangeColor-changeColorBtn');
+    document.querySelector('.changeColorBtn').innerHTML = '<img src="img/changecolorSVG/lightbtn.svg" alt="カラーモード切り替えボタン">';
 };
 
 const darkModeChanger = function () {
-document.querySelector('body').classList.add('js-ChangeColor-body');
-document.querySelector('.self_overview').classList.add('js-ChangeColor-self_ovewview');
-document.querySelector('.skill_openButton').classList.add('js-ChangeColor-skill_openButton');
+    document.querySelector('body').classList.add('js-ChangeColor-body');
+    document.querySelector('.self_overview').classList.add('js-ChangeColor-self_ovewview');
+    document.querySelector('.skill_openButton').classList.add('js-ChangeColor-skill_openButton');
+    document.querySelector('.changeColorBtn').classList.add('js-ChangeColor-changeColorBtn');
+    document.querySelector('.changeColorBtn').innerHTML = '<img src="img/changecolorSVG/darkbtn.svg" alt="カラーモード切り替えボタン">';
 };

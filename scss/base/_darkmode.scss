@@ -5,7 +5,11 @@
     color: var(--darkMode-Color);
 }
 
-
+body {
+    .js-ChangeColor-changeColorBtn {
+        background: var(--lightMode-Color-Reverse);
+    }
+}
 
 .self {
     .js-ChangeColor-self_overview {

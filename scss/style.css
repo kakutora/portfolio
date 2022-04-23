@@ -99,6 +99,10 @@ a:hover {
   color: var(--darkMode-Color);
 }
 
+body .js-ChangeColor-changeColorBtn {
+  background: var(--lightMode-Color-Reverse);
+}
+
 .self .js-ChangeColor-self_overview dt {
   border-bottom: 2px solid var(--darkMode-Color);
   border-left: 2px solid var(--darkMode-Color);
@@ -238,6 +242,21 @@ body {
     background: #191919;
     color: #fafafa;
   }
+}
+
+.changeColorBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 0;
+  background: #191919;
+}
+.changeColorBtn img {
+  width: 50%;
 }
 
 .headerMenu {
