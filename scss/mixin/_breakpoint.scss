@@ -1,0 +1,13 @@
+@mixin breakpoint($point) {
+    @if $point==tablet {
+        @media (min-width: 768px) {//タブレット用
+            @content;
+        }
+    }
+
+    @if $point==pc {
+        @media (min-width: 1024px) {//パソコン用
+            @content;
+        }
+    }
+}

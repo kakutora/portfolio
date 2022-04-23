@@ -1,0 +1,36 @@
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+img {
+  vertical-align: bottom;
+  bottom: none;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+video,
+object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

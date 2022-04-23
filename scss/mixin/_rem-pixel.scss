@@ -1,0 +1,3 @@
+@mixin rem-pixel($size) {//remがpixelみたいに使える
+    font-size: ($size / 10) + rem;
+}
