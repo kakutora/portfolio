@@ -108,3 +108,17 @@ ContactBtn.addEventListener('mouseover', () => {
 ContactBtn.addEventListener('mouseleave', () => {
     document.querySelector('.ContactMenu').classList.remove('js-ContactMenu');
 });
+
+
+
+const lightModeChanger = function () {
+    document.querySelector('body').classList.remove('js-ChangeColor-body');
+    document.querySelector('.self_overview').classList.remove('js-ChangeColor-self_ovewview');
+    document.querySelector('.skill_openButton').classList.remove('js-ChangeColor-skill_openButton');
+};
+
+const darkModeChanger = function () {
+document.querySelector('body').classList.add('js-ChangeColor-body');
+document.querySelector('.self_overview').classList.add('js-ChangeColor-self_ovewview');
+document.querySelector('.skill_openButton').classList.add('js-ChangeColor-skill_openButton');
+};

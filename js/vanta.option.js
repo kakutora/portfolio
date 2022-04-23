@@ -1,4 +1,4 @@
-document.querySelector('body').insertAdjacentHTML('afterbegin', '<div id="bg-animation-light"></div><div id="bg-animation-dark"></div><div id="dummy"></div>');
+document.querySelector('body').insertAdjacentHTML('afterbegin', '<div id="bg-animation-light"></div><div id="bg-animation-dark"></div>');
 
 VANTA.DOTS({
   el: "#bg-animation-light",
@@ -35,18 +35,22 @@ VANTA.DOTS({
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
   document.querySelector('#bg-animation-light').style.display = 'none';
   document.querySelector('#bg-animation-dark').style.display = 'block';
+  darkModeChanger();
 } else {
   document.querySelector('#bg-animation-dark').style.display = 'none';
   document.querySelector('#bg-animation-light').style.display = 'block';
+  lightModeChanger();
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
   if (e.matches) {
     document.querySelector('#bg-animation-light').style.display = 'none';
     document.querySelector('#bg-animation-dark').style.display = 'block';
+    darkModeChanger();
   } else {
     document.querySelector('#bg-animation-dark').style.display = 'none';
     document.querySelector('#bg-animation-light').style.display = 'block';
+    lightModeChanger();
   }
 });
 

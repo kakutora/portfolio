@@ -86,6 +86,43 @@ a:hover {
     transform: translate3d(0, -10px, 0);
   }
 }
+:root {
+  --lightMode-Color: #191919;
+  --lightMode-Color-Reverse: #fafafa;
+  --darkMode-Color: #fafafa;
+  --darkMode-Color-Reverse: #191919;
+  --default-Color-Red: #ff4848;
+}
+
+.js-ChangeColor-body {
+  background: var(--darkMode-Color-Reverse);
+  color: var(--darkMode-Color);
+}
+
+.self .js-ChangeColor-self_overview dt {
+  border-bottom: 2px solid var(--darkMode-Color);
+  border-left: 2px solid var(--darkMode-Color);
+}
+.self .js-ChangeColor-self_overview dd {
+  border-bottom: 2px solid var(--darkMode-Color);
+  border-left: 2px solid var(--darkMode-Color);
+}
+
+.skill .js-ChangeColor-skill_openButton {
+  border-right: 6px solid var(--lightMode-Color-Reverse);
+  border-bottom: 6px solid var(--lightMode-Color-Reverse);
+}
+
+footer ul {
+  background: var(--lightMode-Color-Reverse);
+}
+footer ul li {
+  color: var(--darkMode-Color-Reverse);
+}
+footer ul li a:link {
+  color: var(--darkMode-Color-Reverse);
+}
+
 #bg-animation-light {
   z-index: -10;
   position: fixed;
@@ -190,21 +227,6 @@ a:hover {
 @font-face {
   src: url(../font/GenShinGothic-Medium.ttf);
   font-family: "GenShinGothic";
-}
-@media (prefers-color-scheme: light) {
-  #dummy {
-    display: none;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  #dummy {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 0;
-    height: 0;
-  }
 }
 body {
   font-family: "GenShinGothic";
@@ -463,6 +485,12 @@ body {
   height: 450px;
   border-radius: 25px;
   background: #000;
+  transition: all 0.3s ease;
+}
+.work .work_boxes .work_box .work_image:hover {
+  transform: scale(1.1);
+  transform-origin: center center;
+  transition: all 0.3s ease;
 }
 
 footer {
