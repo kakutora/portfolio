@@ -1,12 +1,16 @@
 @use "base/reset";
 @use "base/base";
-@use "base/font";
 @use "base/keyframes"as k;
 @use "mixin/breakpoint";
 @use "mixin/rem-pixel";
 @use "variables/color"as c;
 @use "js/js";
 //@use "base/darkmode";
+
+@font-face {
+    src: url(../font/GenShinGothic-Medium.ttf);
+    font-family: 'GenShinGothic';
+}
 
 @media (prefers-color-scheme: light) {
     #dummy {
@@ -179,6 +183,7 @@ body {
                 border-bottom: 2px solid c.$darkMode-Color;
                 border-left: 2px solid c.$darkMode-Color;
             }
+
             span {
                 display: inline-block;
             }
@@ -238,7 +243,8 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 height: 160px;
-                picture{
+
+                picture {
                     width: 100px;
                 }
 
@@ -336,19 +342,19 @@ footer {
             a {
                 &:link {
                     color: c.$lightMode-Color-Reverse;
-                    
+
                     @media (prefers-color-scheme: dark) {
                         color: c.$darkMode-Color-Reverse;
                     }
-                    
+
                 }
             }
 
-            
+
             @media (prefers-color-scheme: dark) {
                 color: c.$darkMode-Color-Reverse;
             }
-            
+
         }
     }
 }
