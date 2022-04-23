@@ -229,7 +229,7 @@ body {
 }
 .headerMenu li {
   height: 0;
-  font-size: 23px;
+  font-size: 20px;
   letter-spacing: 2px;
 }
 .headerMenu li:nth-child(1) {
@@ -276,13 +276,13 @@ body {
 .title-content p {
   margin-top: 175px;
   margin-left: 350px;
-  font-size: 35px;
+  font-size: 30px;
 }
 .title-content h1 {
   margin: 0 auto;
   margin-top: 125px;
   text-align: center;
-  font-size: 130px;
+  font-size: 100px;
   font-weight: normal;
 }
 .title-content h1::first-letter {
@@ -302,7 +302,7 @@ body {
 .self .self_name {
   text-align: center;
   margin-top: 75px;
-  font-size: 60px;
+  font-size: 40px;
   letter-spacing: 2px;
 }
 .self .self_name::first-letter {
@@ -360,7 +360,7 @@ body {
 }
 .skill .skill_title {
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -404,6 +404,9 @@ body {
   align-items: center;
   height: 160px;
 }
+.skill .skill_list1 .skill_box figure picture {
+  width: 100px;
+}
 .skill .skill_list1 .skill_box figure figcaption {
   font-size: 22px;
   font-weight: 800;
@@ -415,7 +418,7 @@ body {
 }
 .work .work_title {
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: normal;
   letter-spacing: 2px;
 }

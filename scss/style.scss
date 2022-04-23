@@ -47,7 +47,7 @@ body {
 
     li {
         height: 0;
-        font-size: 23px;
+        font-size: 20px;
         letter-spacing: 2px;
 
         &:nth-child(1) {
@@ -100,14 +100,14 @@ body {
     p {
         margin-top: 175px;
         margin-left: 350px;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     h1 {
         margin: 0 auto;
         margin-top: 125px;
         text-align: center;
-        font-size: 130px;
+        font-size: 100px;
         font-weight: normal;
 
         &::first-letter {
@@ -130,7 +130,7 @@ body {
     .self_name {
         text-align: center;
         margin-top: 75px;
-        font-size: 60px;
+        font-size: 40px;
         letter-spacing: 2px;
 
         &::first-letter {
@@ -192,7 +192,7 @@ body {
 
     .skill_title {
         text-align: center;
-        font-size: 80px;
+        font-size: 60px;
         font-weight: normal;
         letter-spacing: 2px;
 
@@ -238,6 +238,9 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 height: 160px;
+                picture{
+                    width: 100px;
+                }
 
                 figcaption {
                     font-size: 22px;
@@ -254,7 +257,7 @@ body {
 
     .work_title {
         text-align: center;
-        font-size: 80px;
+        font-size: 60px;
         font-weight: normal;
         letter-spacing: 2px;
 
