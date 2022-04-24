@@ -1,11 +1,15 @@
-import { SpanWrap } from './class/SpanWrap.js';
+import {
+    SpanWrap
+} from './class/SpanWrap.js';
+
+const TextWave = document.querySelectorAll('.a-TextWave');
 
 window.addEventListener('DOMContentLoaded', Wave());
 
 async function Wave() {
 
     await new Promise(function (resolve, reject) {
-        const TextWave = document.querySelectorAll('.a-TextWave');
+
         TextWave.forEach(function (value) {
             new SpanWrap(value);
         });
