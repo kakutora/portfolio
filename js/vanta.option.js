@@ -44,40 +44,15 @@ const vantaLight = function () {
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
   vantaDark();
-  darkModeChanger();
 } else {
   vantaLight();
-  lightModeChanger();
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
   if (e.matches) {
     vantaDark();
-    darkModeChanger();
+
   } else {
     vantaLight();
-    lightModeChanger();
   }
 });
-
-/*
-let isDarkmode = false;
-const dummyDOM = document.querySelector('#dummy');
-
-let observer = new IntersectionObserver(() => {
-  isDarkmode = (getComputedStyle(dummyDOM).display === 'block');
-  if (isDarkmode == false) {
-    //VANTA.DOTS(waveWhite);
-    document.querySelector('#bg-animation-dark').style.display = 'none';
-    document.querySelector('#bg-animation-light').style.display = 'block';
-
-  } else if (isDarkmode == true) {
-    //VANTA.DOTS(waveBlack);
-    //document.querySelector('#bg-animation').setAttribute('id','num2');
-    document.querySelector('#bg-animation-light').style.display = 'none';
-    document.querySelector('#bg-animation-dark').style.display = 'block';
-
-  }
-});
-observer.observe(dummyDOM);
-*/

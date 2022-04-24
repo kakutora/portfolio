@@ -1,49 +1,11 @@
-class SpanWrap {
-    constructor(target) {
-
-        this.target = this.convertElement(target);
-        this.nodes = [...this.target.childNodes];
-
-        this.convert();
-    }
-
-    convert() {
-
-        let spanWrapText = ""
-
-        this.nodes.forEach((node) => {
-            if (node.nodeType == 3) { //テキストの場合
-                const text = node.textContent.replace(/\r?\n/g, ''); //テキストから改行コード削除
-                //spanで囲んで連結
-                spanWrapText = spanWrapText + text.split('').reduce((acc, v) => {
-                    return acc + `<span>${v}</span>`
-                }, "");
-            } else { //テキスト以外
-                //<br>などテキスト以外の要素をそのまま連結
-                spanWrapText = spanWrapText + node.outerHTML
-            }
-        })
-
-        this.target.innerHTML = spanWrapText
-
-    }
-
-    //jQueryオブジェクトや文字列セレクターを変換
-    convertElement(element) {
-        if (element instanceof HTMLElement) {
-            return element
-        }
-        return document.querySelector(element);
-    }
-}
-
-const TextWave = document.querySelectorAll('.a-TextWave');
+import { SpanWrap } from './class/SpanWrap.js';
 
 window.addEventListener('DOMContentLoaded', Wave());
 
 async function Wave() {
-    
+
     await new Promise(function (resolve, reject) {
+        const TextWave = document.querySelectorAll('.a-TextWave');
         TextWave.forEach(function (value) {
             new SpanWrap(value);
         });
@@ -101,29 +63,12 @@ document.querySelector('.skill_openButton').addEventListener('click', () => {
 });
 
 const ContactBtn = document.querySelector('.ContactBtn');
+const ContactMenu = document.querySelector('.ContactMenu');
 
 ContactBtn.addEventListener('mouseover', () => {
-    document.querySelector('.ContactMenu').classList.add('js-ContactMenu');
+    ContactMenu.classList.add('js-ContactMenu');
 });
 
 ContactBtn.addEventListener('mouseleave', () => {
-    document.querySelector('.ContactMenu').classList.remove('js-ContactMenu');
+    ContactMenu.classList.remove('js-ContactMenu');
 });
-
-
-
-const lightModeChanger = function () {
-    document.querySelector('body').classList.remove('js-ChangeColor-body');
-    document.querySelector('.self_overview').classList.remove('js-ChangeColor-self_ovewview');
-    document.querySelector('.skill_openButton').classList.remove('js-ChangeColor-skill_openButton');
-    document.querySelector('.changeColorBtn').classList.remove('js-ChangeColor-changeColorBtn');
-    document.querySelector('.changeColorBtn').innerHTML = '<img src="img/changecolorSVG/lightbtn.svg" alt="カラーモード切り替えボタン">';
-};
-
-const darkModeChanger = function () {
-    document.querySelector('body').classList.add('js-ChangeColor-body');
-    document.querySelector('.self_overview').classList.add('js-ChangeColor-self_ovewview');
-    document.querySelector('.skill_openButton').classList.add('js-ChangeColor-skill_openButton');
-    document.querySelector('.changeColorBtn').classList.add('js-ChangeColor-changeColorBtn');
-    document.querySelector('.changeColorBtn').innerHTML = '<img src="img/changecolorSVG/darkbtn.svg" alt="カラーモード切り替えボタン">';
-};
