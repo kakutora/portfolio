@@ -355,7 +355,7 @@ body {
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 45px 150px;
-  width: 1100px;
+  width: 900px;
   margin: 75px auto 0;
   font-size: 25px;
 }
@@ -363,7 +363,7 @@ body {
   width: 200px;
   padding-left: 15px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 2px;
   border-bottom: 2px solid #000000;
   border-left: 2px solid #000000;
@@ -378,10 +378,10 @@ body {
   }
 }
 .self .self_overview dd {
-  width: 700px;
+  width: 500px;
   padding-left: 15px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 2px;
   border-bottom: 2px solid #000000;
   border-left: 2px solid #000000;
@@ -393,7 +393,7 @@ body {
   }
 }
 .self .self_overview dd span {
-  display: inline-block;
+  display: block;
 }
 
 .skill {
@@ -402,7 +402,7 @@ body {
 }
 .skill .skill_title {
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -460,7 +460,7 @@ body {
 }
 .work .work_title {
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -489,19 +489,19 @@ body {
   gap: 60px;
 }
 .work .work_boxes .work_box section .work_title {
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 1000;
 }
 .work .work_boxes .work_box section .work_describe {
-  font-size: 25px;
+  font-size: 20px;
 }
 .work .work_boxes .work_box section .work_describe::first-letter {
-  font-size: 35px;
+  font-size: 25px;
   color: #ff4848;
 }
 .work .work_boxes .work_box .work_image {
-  width: 800px;
-  height: 450px;
+  width: 700px;
+  aspect-ratio: 16/9;
   border-radius: 25px;
   background: #000;
   transition: all 0.3s ease;

@@ -30,7 +30,8 @@ body {
     border-radius: 50%;
     border: 0;
     background: #191919;
-    img{
+
+    img {
         width: 50%;
     }
 }
@@ -142,7 +143,7 @@ body {
         align-items: flex-end;
         flex-wrap: wrap;
         gap: 45px 150px;
-        width: 1100px;
+        width: 900px;
         margin: 75px auto 0;
         font-size: 25px;
 
@@ -150,7 +151,7 @@ body {
             width: 200px;
             padding-left: 15px;
             padding-bottom: 10px;
-            font-size: 20px;
+            font-size: 18px;
             letter-spacing: 2px;
             border-bottom: 2px solid #000000;
             border-left: 2px solid #000000;
@@ -168,10 +169,10 @@ body {
         }
 
         dd {
-            width: 700px;
+            width: 500px;
             padding-left: 15px;
             padding-bottom: 10px;
-            font-size: 20px;
+            font-size: 18px;
             letter-spacing: 2px;
             border-bottom: 2px solid #000000;
             border-left: 2px solid #000000;
@@ -183,7 +184,7 @@ body {
             }
 
             span {
-                display: inline-block;
+                display: block;
             }
         }
     }
@@ -195,7 +196,7 @@ body {
 
     .skill_title {
         text-align: center;
-        font-size: 40px;
+        font-size: 45px;
         font-weight: normal;
         letter-spacing: 2px;
 
@@ -262,7 +263,7 @@ body {
 
     .work_title {
         text-align: center;
-        font-size: 40px;
+        font-size: 45px;
         font-weight: normal;
         letter-spacing: 2px;
 
@@ -294,23 +295,23 @@ body {
                 gap: 60px;
 
                 .work_title {
-                    font-size: 45px;
+                    font-size: 30px;
                     font-weight: 1000;
                 }
 
                 .work_describe {
-                    font-size: 25px;
+                    font-size: 20px;
 
                     &::first-letter {
-                        font-size: 35px;
+                        font-size: 25px;
                         color: v.$default-Color-Red;
                     }
                 }
             }
 
             .work_image {
-                width: 800px;
-                height: 450px;
+                width: 700px;
+                aspect-ratio: 16 / 9;
                 border-radius: 25px;
                 background: #000;
                 transition: all .3s ease;
