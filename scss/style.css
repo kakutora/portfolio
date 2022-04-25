@@ -117,13 +117,13 @@ body .js-ChangeColor-changeColorBtn {
   border-bottom: 6px solid var(--lightMode-Color-Reverse);
 }
 
-footer ul {
+footer .footerMenu {
   background: var(--lightMode-Color-Reverse);
 }
-footer ul li {
+footer .footerMenu .footerMenu_List {
   color: var(--darkMode-Color-Reverse);
 }
-footer ul li a:link {
+footer .footerMenu .footerMenu_List .footerMenu_Link:link {
   color: var(--darkMode-Color-Reverse);
 }
 

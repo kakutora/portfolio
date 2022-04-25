@@ -37,13 +37,13 @@ body {
 
 
 footer {
-    ul {
+    .footerMenu {
         background: var(--lightMode-Color-Reverse);
 
-        li {
+        .footerMenu_List {
             color: var(--darkMode-Color-Reverse);
 
-            a {
+            .footerMenu_Link {
                 &:link {
                     color: var(--darkMode-Color-Reverse);
                 }

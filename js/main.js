@@ -1,6 +1,11 @@
 import {
     SpanWrap
-} from './class/SpanWrap.js';
+} from './modules/SpanWrap.js';
+
+import {
+    vantaDark,
+    vantaLight
+} from './modules/colorModeChanger.js';
 
 const TextWave = document.querySelectorAll('.a-TextWave');
 
@@ -61,10 +66,14 @@ async function Wave() {
     });
 };
 
+
+
 document.querySelector('.skill_openButton').addEventListener('click', () => {
     document.querySelector('.skill_slide').classList.toggle('js-skill_slide');
     document.querySelector('.skill_openButton').classList.toggle('js-skill_openButton');
 });
+
+
 
 const ContactBtn = document.querySelector('.ContactBtn');
 const ContactMenu = document.querySelector('.ContactMenu');
@@ -75,4 +84,24 @@ ContactBtn.addEventListener('mouseover', () => {
 
 ContactBtn.addEventListener('mouseleave', () => {
     ContactMenu.classList.remove('js-ContactMenu');
+});
+
+
+
+
+document.querySelector('body').insertAdjacentHTML('afterbegin', '<div id="bg-animation-light"></div><div id="bg-animation-dark"></div>');
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
+    vantaDark();
+} else {
+    vantaLight();
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (e.matches) {
+        vantaDark();
+
+    } else {
+        vantaLight();
+    }
 });

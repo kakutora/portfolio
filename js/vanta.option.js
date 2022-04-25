@@ -1,5 +1,3 @@
-document.querySelector('body').insertAdjacentHTML('afterbegin', '<div id="bg-animation-light"></div><div id="bg-animation-dark"></div>');
-
 VANTA.DOTS({
   el: "#bg-animation-light",
   mouseControls: false,
@@ -30,29 +28,4 @@ VANTA.DOTS({
   backgroundColor: 0x191919,
   size: 2.50,
   spacing: 50.00
-});
-
-const vantaDark = function () {
-  document.querySelector('#bg-animation-light').style.display = 'none';
-  document.querySelector('#bg-animation-dark').style.display = 'block';
-};
-
-const vantaLight = function () {
-  document.querySelector('#bg-animation-dark').style.display = 'none';
-  document.querySelector('#bg-animation-light').style.display = 'block';
-};
-
-if (window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
-  vantaDark();
-} else {
-  vantaLight();
-}
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-  if (e.matches) {
-    vantaDark();
-
-  } else {
-    vantaLight();
-  }
 });
