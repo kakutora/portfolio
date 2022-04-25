@@ -591,11 +591,29 @@ body {
   width: 100%;
   margin-top: 200px;
 }
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports not (translate: none) {
+    .work .work_boxes {
+      gap: 0;
+    }
+  }
+}
 .work .work_boxes .work_box {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
+}
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports not (translate: none) {
+    .work .work_boxes .work_box {
+      gap: 0;
+      margin-bottom: 400px;
+    }
+    .work .work_boxes .work_box:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 .work .work_boxes .work_box:nth-of-type(even) {
   flex-direction: row-reverse;
@@ -610,12 +628,62 @@ body {
     flex-direction: column;
     gap: 50px;
   }
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      .work .work_boxes .work_box {
+        gap: 0;
+      }
+    }
+  }
+}
+.work .work_boxes .work_box .work_image {
+  width: 80%;
+  max-width: 600px;
+  max-height: 337px;
+  border-radius: 25px;
+  background: #000;
+  transition: all 0.3s ease;
+}
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports not (translate: none) {
+    .work .work_boxes .work_box .work_image {
+      margin-right: 100px;
+    }
+  }
+}
+.work .work_boxes .work_box .work_image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.work .work_boxes .work_box .work_image:hover {
+  transform: scale(1.05);
+  transform-origin: center center;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1280px) {
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      .work .work_boxes .work_box .work_image {
+        gap: 0;
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
 .work .work_boxes .work_box section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 60px;
+}
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports not (translate: none) {
+    .work .work_boxes .work_box section {
+      gap: 0;
+    }
+  }
 }
 @media (max-width: 1280px) {
   .work .work_boxes .work_box section {
@@ -624,10 +692,33 @@ body {
     width: 80%;
     max-width: 600px;
   }
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      .work .work_boxes .work_box section {
+        gap: 0;
+      }
+    }
+  }
 }
 .work .work_boxes .work_box section .work_title {
   font-size: 35px;
   font-weight: 1000;
+}
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports not (translate: none) {
+    .work .work_boxes .work_box section .work_title {
+      margin-bottom: 60px;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      .work .work_boxes .work_box section .work_title {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 @media (max-width: 1024px) {
   .work .work_boxes .work_box section .work_title {
@@ -660,24 +751,6 @@ body {
   .work .work_boxes .work_box section .work_describe {
     font-size: 15px;
   }
-}
-.work .work_boxes .work_box .work_image {
-  width: 80%;
-  max-width: 600px;
-  max-height: 337px;
-  border-radius: 25px;
-  background: #000;
-  transition: all 0.3s ease;
-}
-.work .work_boxes .work_box .work_image::before {
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-}
-.work .work_boxes .work_box .work_image:hover {
-  transform: scale(1.05);
-  transform-origin: center center;
-  transition: all 0.3s ease;
 }
 
 footer {
