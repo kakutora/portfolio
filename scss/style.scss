@@ -444,10 +444,16 @@ body {
             .work_image {
                 width: 80%;
                 max-width: 600px;
-                height: 337px;
+                max-height: 337px;
                 border-radius: 25px;
                 background: #000;
                 transition: all .3s ease;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    padding-top: 56.25%;
+                }
 
                 &:hover {
                     transform: scale(1.05);
