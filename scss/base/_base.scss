@@ -28,6 +28,13 @@ a {
 			color: c.$darkMode-Color;
 		}
 	}
+	&:visited{
+		color: c.$lightMode-Color-Reverse;
+
+		@media (prefers-color-scheme: dark) {
+			color: c.$darkMode-Color-Reverse;
+		}
+	}
 
 	&:hover {
 		color: #0CECDD;

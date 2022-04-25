@@ -65,6 +65,14 @@ a:link {
     color: #fafafa;
   }
 }
+a:visited {
+  color: #fafafa;
+}
+@media (prefers-color-scheme: dark) {
+  a:visited {
+    color: #191919;
+  }
+}
 a:hover {
   color: #0CECDD;
 }
@@ -333,7 +341,8 @@ body {
 }
 @media (max-width: 600px) {
   .title-content p {
-    margin-top: 250px;
+    padding-top: 0;
+    margin-top: 30vh;
     margin-left: 75px;
     font-size: 20px;
   }
@@ -361,7 +370,7 @@ body {
 }
 
 .self {
-  margin-top: 500px;
+  margin-top: 50vh;
 }
 .self .self_image {
   width: 250px;
@@ -372,14 +381,14 @@ body {
 }
 @media (max-width: 600px) {
   .self .self_image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 }
 .self .self_name {
   text-align: center;
   margin-top: 75px;
-  font-size: 40px;
+  font-size: 35px;
   letter-spacing: 2px;
 }
 .self .self_name::first-letter {
@@ -399,6 +408,7 @@ body {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 0;
     width: 100%;
   }
 }
@@ -417,6 +427,7 @@ body {
 @media (max-width: 1024px) {
   .self .self_overview dt {
     width: auto;
+    margin-bottom: 25px;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -437,6 +448,7 @@ body {
 @media (max-width: 1024px) {
   .self .self_overview dd {
     width: auto;
+    margin-bottom: 75px;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -620,7 +632,7 @@ footer .footerMenu {
   justify-content: center;
   align-items: center;
   gap: 100px;
-  width: 90%;
+  width: 80%;
   height: 75px;
   margin: 350px auto 0;
   border-radius: 15px;
@@ -629,7 +641,12 @@ footer .footerMenu {
 }
 @media (max-width: 1024px) {
   footer .footerMenu {
-    display: none;
+    gap: 75px;
+  }
+}
+@media (max-width: 600px) {
+  footer .footerMenu {
+    gap: 50px;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -641,6 +658,51 @@ footer .footerMenu .footerMenu_List {
   font-size: 20px;
   letter-spacing: 2px;
   color: #fafafa;
+}
+footer .footerMenu .footerMenu_List:nth-child(1)::after {
+  content: "github";
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 35px;
+}
+footer .footerMenu .footerMenu_List:nth-child(2)::after {
+  content: "G-Mail";
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+footer .footerMenu .footerMenu_List:nth-child(3)::after {
+  content: "Tel";
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 35px;
+}
+@media (max-width: 600px) {
+  footer .footerMenu .footerMenu_List:nth-child(1)::after {
+    content: "";
+    margin-left: 0;
+    line-height: 0;
+  }
+  footer .footerMenu .footerMenu_List:nth-child(2)::after {
+    content: "";
+    margin-left: 0;
+    line-height: 0;
+  }
+  footer .footerMenu .footerMenu_List:nth-child(3)::after {
+    content: "";
+    margin-left: 0;
+    line-height: 0;
+  }
+}
+footer .footerMenu .footerMenu_List .footerMenu_Link img {
+  width: 35px;
+  height: 35px;
+}
+@media (max-width: 600px) {
+  footer .footerMenu .footerMenu_List .footerMenu_Link img {
+    width: 25px;
+    height: 25px;
+  }
 }
 footer .footerMenu .footerMenu_List .footerMenu_Link:link {
   color: #fafafa;

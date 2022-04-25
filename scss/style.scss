@@ -112,7 +112,8 @@ body {
         }
 
         @include m.breakpoint(sp) {
-            margin-top: 250px;
+            padding-top: 0;
+            margin-top: 30vh;
             margin-left: 75px;
             font-size: 20px;
         }
@@ -141,7 +142,7 @@ body {
 }
 
 .self {
-    margin-top: 500px;
+    margin-top: 50vh;
 
     .self_image {
         width: 250px;
@@ -151,15 +152,15 @@ body {
         background: #000;
 
         @include m.breakpoint(sp) {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
         }
     }
 
     .self_name {
         text-align: center;
         margin-top: 75px;
-        font-size: 40px;
+        font-size: 35px;
         letter-spacing: 2px;
 
         &::first-letter {
@@ -180,8 +181,8 @@ body {
             flex-direction: column;
             align-items: center;
             flex-wrap: nowrap;
+            gap: 0;
             width: 100%;
-
         }
 
         dt {
@@ -199,6 +200,7 @@ body {
 
             @include m.breakpoint(tab) {
                 width: auto;
+                margin-bottom: 25px;
             }
 
             @media (prefers-color-scheme: dark) {
@@ -219,6 +221,7 @@ body {
 
             @include m.breakpoint(tab) {
                 width: auto;
+                margin-bottom: 75px;
             }
 
             @media (prefers-color-scheme: dark) {
@@ -419,7 +422,7 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 100px;
-        width: 90%;
+        width: 80%;
         height: 75px;
         margin: 350px auto 0;
         border-radius: 15px;
@@ -427,7 +430,11 @@ footer {
         color: v.$lightMode-Color-Reverse;
 
         @include m.breakpoint(tab) {
-            display: none;
+            gap: 75px;
+        }
+
+        @include m.breakpoint(sp) {
+            gap: 50px;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -440,7 +447,58 @@ footer {
             letter-spacing: 2px;
             color: v.$lightMode-Color-Reverse;
 
+            &:nth-child(1)::after {
+                content: 'github';
+                margin-left: 10px;
+                font-size: 18px;
+                line-height: 35px;
+            }
+
+            &:nth-child(2)::after {
+                content: 'G-Mail';
+                margin-left: 10px;
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            &:nth-child(3)::after {
+                content: 'Tel';
+                margin-left: 10px;
+                font-size: 18px;
+                line-height: 35px;
+            }
+
+            @include m.breakpoint(sp) {
+                &:nth-child(1)::after {
+                    content: '';
+                    margin-left: 0;
+                    line-height: 0;
+                }
+
+                &:nth-child(2)::after {
+                    content: '';
+                    margin-left: 0;
+                    line-height: 0;
+                }
+
+                &:nth-child(3)::after {
+                    content: '';
+                    margin-left: 0;
+                    line-height: 0;
+                }
+            }
+
             .footerMenu_Link {
+                img {
+                    width: 35px;
+                    height: 35px;
+
+                    @include m.breakpoint(sp) {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
                 &:link {
                     color: v.$lightMode-Color-Reverse;
 
