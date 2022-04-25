@@ -476,7 +476,7 @@ body {
 @media (max-width: 1024px) {
   .self .self_overview dd {
     width: auto;
-    margin-bottom: 75px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 600px) {
@@ -621,7 +621,8 @@ body {
   .work .work_boxes .work_box section {
     align-items: flex-start;
     gap: 30px;
-    width: min(80%, 600px);
+    width: 80%;
+    max-width: 600px;
   }
 }
 .work .work_boxes .work_box section .work_title {
@@ -661,8 +662,9 @@ body {
   }
 }
 .work .work_boxes .work_box .work_image {
-  width: min(80%, 600px);
-  aspect-ratio: 16/9;
+  width: 80%;
+  max-width: 600px;
+  height: 337px;
   border-radius: 25px;
   background: #000;
   transition: all 0.3s ease;
