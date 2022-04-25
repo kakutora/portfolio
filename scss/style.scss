@@ -67,6 +67,10 @@ body {
             }
         }
 
+        a{
+            color: inherit;
+        }
+
         span {
             display: inline-block;
             opacity: 0;
@@ -169,6 +173,10 @@ body {
         font-size: 35px;
         letter-spacing: 2px;
 
+        @include m.breakpoint(sp) {
+            font-size: 30px;
+        }
+
         &::first-letter {
             color: v.$default-Color-Red;
         }
@@ -185,10 +193,15 @@ body {
 
         @include m.breakpoint(tab) {
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: nowrap;
             gap: 0;
-            width: 100%;
+            width: 400px;
+            margin-top: 75px;
+        }
+
+        @include m.breakpoint(sp) {
+            width: 220px;
         }
 
         dt {
@@ -206,7 +219,12 @@ body {
 
             @include m.breakpoint(tab) {
                 width: auto;
-                margin-bottom: 25px;
+                margin-bottom: 15px;
+            }
+
+            @include m.breakpoint(sp) {
+                padding-left: 10px;
+                font-size: 15px;
             }
 
             @media (prefers-color-scheme: dark) {
@@ -230,6 +248,11 @@ body {
                 margin-bottom: 75px;
             }
 
+            @include m.breakpoint(sp) {
+                padding-left: 10px;
+                font-size: 13px;
+            }
+
             @media (prefers-color-scheme: dark) {
                 border-bottom: 2px solid v.$darkMode-Color;
                 border-left: 2px solid v.$darkMode-Color;
@@ -237,6 +260,14 @@ body {
 
             span {
                 display: block;
+
+                .m-display {
+                    display: inline;
+
+                    @include m.breakpoint(sp) {
+                        display: block;
+                    }
+                }
             }
         }
     }
@@ -365,6 +396,12 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 gap: 60px;
+
+                @include m.breakpoint(hd) {
+                    align-items: flex-start;
+                    gap: 30px;
+                    width: min(80%, 600px);
+                }
 
                 .work_title {
                     font-size: 35px;
