@@ -768,14 +768,35 @@ footer .footerMenu {
   background: #191919;
   color: #fafafa;
 }
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports not (translate: none) {
+    footer .footerMenu {
+      gap: 0;
+    }
+  }
+}
 @media (max-width: 1024px) {
   footer .footerMenu {
     gap: 75px;
+  }
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      footer .footerMenu {
+        gap: 0;
+      }
+    }
   }
 }
 @media (max-width: 600px) {
   footer .footerMenu {
     gap: 50px;
+  }
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      footer .footerMenu {
+        gap: 0;
+      }
+    }
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -787,6 +808,40 @@ footer .footerMenu .footerMenu_List {
   font-size: 20px;
   letter-spacing: 2px;
   color: #fafafa;
+}
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports not (translate: none) {
+    footer .footerMenu .footerMenu_List {
+      margin-right: 100px;
+    }
+    footer .footerMenu .footerMenu_List:last-child {
+      margin-right: 0;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  footer .footerMenu .footerMenu_List {
+    margin-right: 75px;
+  }
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      footer .footerMenu .footerMenu_List:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  footer .footerMenu .footerMenu_List {
+    margin-right: 50px;
+  }
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      footer .footerMenu .footerMenu_List:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 footer .footerMenu .footerMenu_List:nth-child(1)::after {
   content: "github";

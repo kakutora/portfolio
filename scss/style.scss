@@ -545,12 +545,30 @@ footer {
         background: v.$darkMode-Color-Reverse;
         color: v.$lightMode-Color-Reverse;
 
+        @media not all and (min-resolution:.001dpcm) {
+            @supports (not (translate: none)) {
+                gap: 0;
+            }
+        }
+
         @include m.breakpoint(tab) {
             gap: 75px;
+
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (not (translate: none)) {
+                    gap: 0;
+                }
+            }
         }
 
         @include m.breakpoint(sp) {
             gap: 50px;
+
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (not (translate: none)) {
+                    gap: 0;
+                }
+            }
         }
 
         @media (prefers-color-scheme: dark) {
@@ -562,6 +580,41 @@ footer {
             font-size: 20px;
             letter-spacing: 2px;
             color: v.$lightMode-Color-Reverse;
+
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (not (translate: none)) {
+                    margin-right: 100px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            @include m.breakpoint(tab) {
+                margin-right: 75px;
+
+                @media not all and (min-resolution:.001dpcm) {
+                    @supports (not (translate: none)) {
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            @include m.breakpoint(sp) {
+                margin-right: 50px;
+
+                @media not all and (min-resolution:.001dpcm) {
+                    @supports (not (translate: none)) {
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
 
             &:nth-child(1)::after {
                 content: 'github';
