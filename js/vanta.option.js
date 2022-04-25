@@ -1,7 +1,7 @@
 VANTA.DOTS({
   el: "#bg-animation-light",
-  mouseControls: false,
-  touchControls: false,
+  mouseControls: true,
+  touchControls: true,
   gyroControls: false,
   minHeight: 100.00,
   minWidth: 100.00,
@@ -16,8 +16,8 @@ VANTA.DOTS({
 
 VANTA.DOTS({
   el: "#bg-animation-dark",
-  mouseControls: false,
-  touchControls: false,
+  mouseControls: true,
+  touchControls: true,
   gyroControls: false,
   minHeight: 100.00,
   minWidth: 100.00,

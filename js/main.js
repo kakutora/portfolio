@@ -34,7 +34,7 @@ async function Wave() {
     await new Promise(function (resolve) {
         const TextWaveAbout = TextWave[1].children;
         setTimeout(() => {
-            for (let j = 0; j < 8; j++) {
+            for (let j = 0; j < 7; j++) {
                 TextWaveAbout[j].classList.add('js-show');
             };
             resolve();

@@ -1,5 +1,5 @@
 @use "base"as base;
-@use "mixin";
+@use "mixin"as m;
 @use "variables"as v;
 @use "js/js";
 
@@ -45,6 +45,10 @@ body {
     margin-top: 0px;
     padding-top: 50px;
 
+    @include m.breakpoint(sp) {
+        display: none;
+    }
+
     li {
         height: 0;
         font-size: 20px;
@@ -52,11 +56,11 @@ body {
 
         &:nth-child(1) {
             margin-right: auto;
-            margin-left: 100px;
+            margin-left: 75px;
         }
 
         &:nth-child(3) {
-            margin-right: 100px;
+            margin-right: 75px;
 
             &:hover {
                 height: 50px;
@@ -101,6 +105,17 @@ body {
         margin-top: 175px;
         margin-left: 350px;
         font-size: 30px;
+
+        @include m.breakpoint(tab) {
+            padding-top: 100px;
+            margin-left: 100px;
+        }
+
+        @include m.breakpoint(sp) {
+            margin-top: 250px;
+            margin-left: 75px;
+            font-size: 20px;
+        }
     }
 
     h1 {
@@ -112,6 +127,15 @@ body {
 
         &::first-letter {
             color: v.$default-Color-Red;
+        }
+
+        @include m.breakpoint(tab) {
+            font-size: 80px;
+        }
+
+        @include m.breakpoint(sp) {
+            margin-top: 75px;
+            font-size: 50px;
         }
     }
 }
@@ -125,6 +149,11 @@ body {
         margin: 0 auto;
         border-radius: 50%;
         background: #000;
+
+        @include m.breakpoint(sp) {
+            width: 200px;
+            height: 200px;
+        }
     }
 
     .self_name {
@@ -142,13 +171,21 @@ body {
         display: flex;
         align-items: flex-end;
         flex-wrap: wrap;
-        gap: 45px 150px;
-        width: 900px;
+        gap: 45px 125px;
+        width: 800px;
         margin: 75px auto 0;
         font-size: 25px;
 
+        @include m.breakpoint(tab) {
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: 100%;
+
+        }
+
         dt {
-            width: 200px;
+            width: 175px;
             padding-left: 15px;
             padding-bottom: 10px;
             font-size: 18px;
@@ -160,6 +197,9 @@ body {
                 color: v.$default-Color-Red;
             }
 
+            @include m.breakpoint(tab) {
+                width: auto;
+            }
 
             @media (prefers-color-scheme: dark) {
                 border-bottom: 2px solid v.$darkMode-Color;
@@ -169,7 +209,7 @@ body {
         }
 
         dd {
-            width: 500px;
+            width: 450px;
             padding-left: 15px;
             padding-bottom: 10px;
             font-size: 18px;
@@ -177,6 +217,9 @@ body {
             border-bottom: 2px solid #000000;
             border-left: 2px solid #000000;
 
+            @include m.breakpoint(tab) {
+                width: auto;
+            }
 
             @media (prefers-color-scheme: dark) {
                 border-bottom: 2px solid v.$darkMode-Color;
@@ -202,6 +245,10 @@ body {
 
         &::first-letter {
             color: v.$default-Color-Red;
+        }
+
+        @include m.breakpoint(sp) {
+            font-size: 40px;
         }
     }
 
@@ -270,13 +317,20 @@ body {
         &::first-letter {
             color: v.$default-Color-Red;
         }
+
+        @include m.breakpoint(sp) {
+            font-size: 40px;
+        }
     }
 
     .work_boxes {
         display: flex;
         flex-direction: column;
         gap: 400px;
+        width: 100%;
         margin-top: 200px;
+
+        @include m.breakpoint(tab) {}
 
         .work_box {
             display: flex;
@@ -286,6 +340,15 @@ body {
 
             &:nth-of-type(even) {
                 flex-direction: row-reverse;
+
+                @include m.breakpoint(hd) {
+                    flex-direction: column;
+                }
+            }
+
+            @include m.breakpoint(hd) {
+                flex-direction: column;
+                gap: 50px;
             }
 
             section {
@@ -295,8 +358,16 @@ body {
                 gap: 60px;
 
                 .work_title {
-                    font-size: 30px;
+                    font-size: 35px;
                     font-weight: 1000;
+
+                    @include m.breakpoint(tab) {
+                        font-size: 30px;
+                    }
+
+                    @include m.breakpoint(sp) {
+                        font-size: 25px;
+                    }
                 }
 
                 .work_describe {
@@ -305,19 +376,33 @@ body {
                     &::first-letter {
                         font-size: 25px;
                         color: v.$default-Color-Red;
+
+                        @include m.breakpoint(tab) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    /*
+                    @include m.breakpoint(tab) {
+                        font-size: 20px;
+                    }
+*/
+
+                    @include m.breakpoint(sp) {
+                        font-size: 15px;
                     }
                 }
             }
 
             .work_image {
-                width: 700px;
+                width: min(80%, 600px);
                 aspect-ratio: 16 / 9;
                 border-radius: 25px;
                 background: #000;
                 transition: all .3s ease;
 
                 &:hover {
-                    transform: scale(1.1);
+                    transform: scale(1.05);
                     transform-origin: center center;
                     transition: all .3s ease;
                 }
@@ -329,7 +414,7 @@ body {
 footer {
     padding-bottom: 50px;
 
-    ul {
+    .footerMenu {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -341,33 +426,37 @@ footer {
         background: v.$darkMode-Color-Reverse;
         color: v.$lightMode-Color-Reverse;
 
+        @include m.breakpoint(tab) {
+            display: none;
+        }
 
         @media (prefers-color-scheme: dark) {
             background: v.$lightMode-Color-Reverse;
         }
 
 
-        li {
+        .footerMenu_List {
             font-size: 20px;
             letter-spacing: 2px;
+            color: v.$lightMode-Color-Reverse;
 
-            a {
+            .footerMenu_Link {
                 &:link {
                     color: v.$lightMode-Color-Reverse;
 
                     @media (prefers-color-scheme: dark) {
                         color: v.$darkMode-Color-Reverse;
                     }
+                }
 
-
+                &:hover {
+                    color: #0CECDD;
                 }
             }
-
 
             @media (prefers-color-scheme: dark) {
                 color: v.$darkMode-Color-Reverse;
             }
-
         }
     }
 }
