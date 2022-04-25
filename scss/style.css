@@ -236,7 +236,7 @@ footer .footerMenu .footerMenu_List .footerMenu_Link:link {
 }
 
 @font-face {
-  src: url(../font/GenShinGothic-Medium.ttf);
+  src: url(../font/GenShinGothic-Medium.woff2);
   font-family: "GenShinGothic";
 }
 body {
