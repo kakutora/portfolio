@@ -550,7 +550,7 @@ footer {
 
         @media not all and (min-resolution:.001dpcm) {
             @supports (not (translate: none)) {
-                gap: 0;
+                //gap: 0;
             }
         }
 
@@ -559,7 +559,7 @@ footer {
 
             @media not all and (min-resolution:.001dpcm) {
                 @supports (not (translate: none)) {
-                    gap: 0;
+                    //gap: 0;
                 }
             }
         }
