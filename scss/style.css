@@ -551,8 +551,18 @@ body {
 }
 .skill .skill_list1 h3 {
   text-align: center;
-  font-size: 55px;
+  font-size: 30px;
   letter-spacing: 2px;
+}
+@media (max-width: 1024px) {
+  .skill .skill_list1 h3 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 h3 {
+    font-size: 20px;
+  }
 }
 .skill .skill_list1 .skill_boxes {
   display: flex;
@@ -921,36 +931,36 @@ footer .footerMenu .footerMenu_List {
     }
   }
 }
-footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(1)::after {
+footer .footerMenu .footerMenu_List:nth-of-type(1) .footerMenu_Link::after {
   content: "github";
   margin-left: 10px;
   font-size: 18px;
   line-height: 35px;
 }
-footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(2)::after {
+footer .footerMenu .footerMenu_List:nth-of-type(2) .footerMenu_Link::after {
   content: "G-Mail";
   margin-left: 10px;
   font-size: 18px;
   line-height: 30px;
 }
-footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(3)::after {
+footer .footerMenu .footerMenu_List:nth-of-type(3) .footerMenu_Link::after {
   content: "Tel";
   margin-left: 10px;
   font-size: 18px;
   line-height: 35px;
 }
 @media (max-width: 600px) {
-  footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(1)::after {
+  footer .footerMenu .footerMenu_List:nth-of-type(1) .footerMenu_Link::after {
     content: "";
     margin-left: 0;
     line-height: 0;
   }
-  footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(2)::after {
+  footer .footerMenu .footerMenu_List:nth-of-type(2) .footerMenu_Link::after {
     content: "";
     margin-left: 0;
     line-height: 0;
   }
-  footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(3)::after {
+  footer .footerMenu .footerMenu_List:nth-of-type(3) .footerMenu_Link::after {
     content: "";
     margin-left: 0;
     line-height: 0;
