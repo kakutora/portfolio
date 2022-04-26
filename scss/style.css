@@ -219,6 +219,16 @@ footer .footerMenu .footerMenu_List .footerMenu_Link:link {
   padding-bottom: 800px;
   transition: all 0.6s ease;
 }
+@media (max-width: 1280px) {
+  .skill .js-skill_slide {
+    padding-bottom: 1000px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .js-skill_slide {
+    padding-bottom: 700px;
+  }
+}
 
 .headerNav .js-ContactMenu {
   height: 300px;
@@ -550,9 +560,20 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 100px;
-  width: 80%;
+  width: 1100px;
   margin: 0 auto;
   margin-top: 100px;
+}
+@media (max-width: 1280px) {
+  .skill .skill_list1 .skill_boxes {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 .skill_boxes {
+    gap: 0px;
+    width: 100%;
+  }
 }
 .skill .skill_list1 .skill_boxes .skill_box {
   display: flex;
@@ -560,14 +581,51 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  width: 100px;
+  width: 120px;
   height: 190px;
+  line-height: 1.3;
+}
+@media (max-width: 1280px) {
+  .skill .skill_list1 .skill_boxes .skill_box {
+    height: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .skill .skill_list1 .skill_boxes .skill_box {
+    width: 110px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 .skill_boxes .skill_box {
+    gap: 0;
+    width: 21%;
+  }
 }
 .skill .skill_list1 .skill_boxes .skill_box picture {
-  width: 100px;
+  width: 75px;
+}
+@media (max-width: 1024px) {
+  .skill .skill_list1 .skill_boxes .skill_box picture {
+    width: 75px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 .skill_boxes .skill_box picture {
+    width: 50px;
+  }
 }
 .skill .skill_list1 .skill_boxes .skill_box p {
-  width: 100px;
+  width: 75px;
+}
+@media (max-width: 1024px) {
+  .skill .skill_list1 .skill_boxes .skill_box p {
+    width: 75px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 .skill_boxes .skill_box p {
+    width: 50px;
+  }
 }
 .skill .skill_list1 .skill_boxes .skill_box p img {
   width: 100%;
@@ -577,9 +635,30 @@ body {
   font-weight: 800;
   letter-spacing: 1px;
 }
+@media (max-width: 1280px) {
+  .skill .skill_list1 .skill_boxes .skill_box figcaption {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 .skill_boxes .skill_box figcaption {
+    font-size: 15px;
+  }
+}
 .skill .skill_list1 .skill_boxes .skill_box figcaption span {
   display: block;
   text-align: center;
+  font-size: 17px;
+}
+@media (max-width: 1280px) {
+  .skill .skill_list1 .skill_boxes .skill_box figcaption span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 .skill_boxes .skill_box figcaption span {
+    font-size: 10px;
+  }
 }
 
 .work {

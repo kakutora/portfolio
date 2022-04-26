@@ -16,7 +16,7 @@
 
     @if $point==sp {
         @media (max-width: 600px) {
-            //パソコン用
+            //スマートフォン用
             @content;
         }
     }

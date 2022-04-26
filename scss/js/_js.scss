@@ -1,3 +1,5 @@
+@use "../mixin"as m;
+
 #bg-animation-light {
     z-index: -10;
     position: fixed;
@@ -35,10 +37,11 @@
 }
 
 .skill {
-    .skill_openButton{
+    .skill_openButton {
         transform: rotateZ(45deg);
         transition: all .4s ease;
     }
+
     .js-skill_openButton {
         transform: rotateZ(225deg);
         transition: all .4s ease;
@@ -54,6 +57,16 @@
         transform: translateY(0);
         padding-bottom: 800px;
         transition: all .6s ease;
+
+        @include m.breakpoint(hd) {
+            padding-bottom: 1000px;
+        }
+        @include m.breakpoint(tab) {
+            //padding-bottom: 1000px;
+        }
+        @include m.breakpoint(sp) {
+            padding-bottom: 700px;
+        }
     }
 }
 
