@@ -544,27 +544,42 @@ body {
   font-size: 55px;
   letter-spacing: 2px;
 }
-.skill .skill_list1 .skill_box {
+.skill .skill_list1 .skill_boxes {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  flex-wrap: wrap;
+  gap: 100px;
+  width: 80%;
+  margin: 0 auto;
   margin-top: 100px;
 }
-.skill .skill_list1 .skill_box figure {
+.skill .skill_list1 .skill_boxes .skill_box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 160px;
+  gap: 20px;
+  width: 100px;
+  height: 190px;
 }
-.skill .skill_list1 .skill_box figure picture {
+.skill .skill_list1 .skill_boxes .skill_box picture {
   width: 100px;
 }
-.skill .skill_list1 .skill_box figure figcaption {
+.skill .skill_list1 .skill_boxes .skill_box p {
+  width: 100px;
+}
+.skill .skill_list1 .skill_boxes .skill_box p img {
+  width: 100%;
+}
+.skill .skill_list1 .skill_boxes .skill_box figcaption {
   font-size: 22px;
   font-weight: 800;
   letter-spacing: 1px;
+}
+.skill .skill_list1 .skill_boxes .skill_box figcaption span {
+  display: block;
+  text-align: center;
 }
 
 .work {
