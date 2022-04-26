@@ -886,48 +886,6 @@ footer .footerMenu .footerMenu_List {
   font-size: 20px;
   letter-spacing: 2px;
   color: #fafafa;
-  /*
-              &:nth-child(1)::after {
-                  content: 'github';
-                  margin-left: 10px;
-                  font-size: 18px;
-                  line-height: 35px;
-              }
-
-              &:nth-child(2)::after {
-                  content: 'G-Mail';
-                  margin-left: 10px;
-                  font-size: 18px;
-                  line-height: 30px;
-              }
-
-              &:nth-child(3)::after {
-                  content: 'Tel';
-                  margin-left: 10px;
-                  font-size: 18px;
-                  line-height: 35px;
-              }
-
-              @include m.breakpoint(sp) {
-                  &:nth-child(1)::after {
-                      content: '';
-                      margin-left: 0;
-                      line-height: 0;
-                  }
-
-                  &:nth-child(2)::after {
-                      content: '';
-                      margin-left: 0;
-                      line-height: 0;
-                  }
-
-                  &:nth-child(3)::after {
-                      content: '';
-                      margin-left: 0;
-                      line-height: 0;
-                  }
-              }
-  */
 }
 @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
   @supports not (translate: none) {
@@ -961,6 +919,41 @@ footer .footerMenu .footerMenu_List {
         margin-right: 0;
       }
     }
+  }
+}
+footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(1)::after {
+  content: "github";
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 35px;
+}
+footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(2)::after {
+  content: "G-Mail";
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(3)::after {
+  content: "Tel";
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 35px;
+}
+@media (max-width: 600px) {
+  footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(1)::after {
+    content: "";
+    margin-left: 0;
+    line-height: 0;
+  }
+  footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(2)::after {
+    content: "";
+    margin-left: 0;
+    line-height: 0;
+  }
+  footer .footerMenu .footerMenu_List .footerMenu_Link:nth-child(3)::after {
+    content: "";
+    margin-left: 0;
+    line-height: 0;
   }
 }
 footer .footerMenu .footerMenu_List .footerMenu_Link img {

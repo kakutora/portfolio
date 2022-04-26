@@ -693,49 +693,49 @@ footer {
                 }
             }
 
-            /*
-            &:nth-child(1)::after {
-                content: 'github';
-                margin-left: 10px;
-                font-size: 18px;
-                line-height: 35px;
-            }
 
-            &:nth-child(2)::after {
-                content: 'G-Mail';
-                margin-left: 10px;
-                font-size: 18px;
-                line-height: 30px;
-            }
-
-            &:nth-child(3)::after {
-                content: 'Tel';
-                margin-left: 10px;
-                font-size: 18px;
-                line-height: 35px;
-            }
-
-            @include m.breakpoint(sp) {
+            .footerMenu_Link {
                 &:nth-child(1)::after {
-                    content: '';
-                    margin-left: 0;
-                    line-height: 0;
+                    content: 'github';
+                    margin-left: 10px;
+                    font-size: 18px;
+                    line-height: 35px;
                 }
 
                 &:nth-child(2)::after {
-                    content: '';
-                    margin-left: 0;
-                    line-height: 0;
+                    content: 'G-Mail';
+                    margin-left: 10px;
+                    font-size: 18px;
+                    line-height: 30px;
                 }
 
                 &:nth-child(3)::after {
-                    content: '';
-                    margin-left: 0;
-                    line-height: 0;
+                    content: 'Tel';
+                    margin-left: 10px;
+                    font-size: 18px;
+                    line-height: 35px;
                 }
-            }
-*/
-            .footerMenu_Link {
+
+                @include m.breakpoint(sp) {
+                    &:nth-child(1)::after {
+                        content: '';
+                        margin-left: 0;
+                        line-height: 0;
+                    }
+
+                    &:nth-child(2)::after {
+                        content: '';
+                        margin-left: 0;
+                        line-height: 0;
+                    }
+
+                    &:nth-child(3)::after {
+                        content: '';
+                        margin-left: 0;
+                        line-height: 0;
+                    }
+                }
+
                 img {
                     width: 35px;
                     height: 35px;
