@@ -373,7 +373,6 @@ body {
         @media not all and (min-resolution:.001dpcm) {
             @supports (not (translate: none)) {
                 gap: 0;
-
             }
         }
 
@@ -409,12 +408,13 @@ body {
                 @media not all and (min-resolution:.001dpcm) {
                     @supports (not (translate: none)) {
                         gap: 0;
-
                     }
                 }
             }
 
             .work_image {
+                position: relative;
+                overflow: hidden;
                 width: 80%;
                 max-width: 600px;
                 max-height: 337px;
@@ -429,8 +429,11 @@ body {
                 }
 
                 &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     content: "";
-                    display: block;
+                    display: inline-block;
                     padding-top: 56.25%;
                 }
 
@@ -604,7 +607,7 @@ footer {
             }
 
             @include m.breakpoint(sp) {
-                margin-right: 50px;
+                margin-right: 0px;
 
                 @media not all and (min-resolution:.001dpcm) {
                     @supports (not (translate: none)) {
@@ -615,7 +618,7 @@ footer {
                 }
             }
 
-
+            /*
             &:nth-child(1)::after {
                 content: 'github';
                 margin-left: 10px;
@@ -656,7 +659,7 @@ footer {
                     line-height: 0;
                 }
             }
-
+*/
             .footerMenu_Link {
                 img {
                     width: 35px;
