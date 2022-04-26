@@ -796,13 +796,6 @@ footer .footerMenu {
   footer .footerMenu {
     gap: 50px;
   }
-  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
-    @supports not (translate: none) {
-      footer .footerMenu {
-        gap: 0;
-      }
-    }
-  }
 }
 @media (prefers-color-scheme: dark) {
   footer .footerMenu {
