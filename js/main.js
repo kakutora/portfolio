@@ -92,16 +92,16 @@ ContactBtn.addEventListener('mouseleave', () => {
 document.querySelector('body').insertAdjacentHTML('afterbegin', '<div id="bg-animation-light"></div><div id="bg-animation-dark"></div>');
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
-    //vantaDark();
+    vantaDark();
 } else {
-    //vantaLight();
+    vantaLight();
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (e.matches) {
-        //vantaDark();
+        vantaDark();
 
     } else {
-        //vantaLight();
+        vantaLight();
     }
 });
