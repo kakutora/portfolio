@@ -61,16 +61,40 @@
         @include m.breakpoint(hd) {
             padding-bottom: 1000px;
         }
+
         @include m.breakpoint(tab) {
             //padding-bottom: 1000px;
         }
+
         @include m.breakpoint(sp) {
-            padding-bottom: 700px;
+            padding-bottom: 750px;
         }
     }
 }
 
 .headerNav {
+    .js-headerMenu {
+        @include m.breakpoint(sp) {
+            transform: translateX(0);
+            transition: transform .5s ease;
+        }
+    }
+
+    .js-hamburgerBtn {
+        @include m.breakpoint(sp) {
+            span{
+                transition: transform .5s ease;
+                &:nth-of-type(1) {
+                    transform: rotateZ(45deg);
+                }
+    
+                &:nth-of-type(2) {
+                    transform: rotateZ(-45deg);
+                }
+            }
+        }
+    }
+
     .js-ContactMenu {
         height: 300px;
         opacity: 1;

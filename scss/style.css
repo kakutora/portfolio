@@ -138,16 +138,16 @@ footer .footerMenu .footerMenu_List .footerMenu_Link:link {
   z-index: -10;
   position: fixed;
   display: none;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 #bg-animation-dark {
   z-index: -10;
   position: fixed;
   display: none;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .a-TextWave .js-show {
@@ -226,10 +226,27 @@ footer .footerMenu .footerMenu_List .footerMenu_Link:link {
 }
 @media (max-width: 600px) {
   .skill .js-skill_slide {
-    padding-bottom: 700px;
+    padding-bottom: 750px;
   }
 }
 
+@media (max-width: 600px) {
+  .headerNav .js-headerMenu {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+  }
+}
+@media (max-width: 600px) {
+  .headerNav .js-hamburgerBtn span {
+    transition: transform 0.5s ease;
+  }
+  .headerNav .js-hamburgerBtn span:nth-of-type(1) {
+    transform: rotateZ(45deg);
+  }
+  .headerNav .js-hamburgerBtn span:nth-of-type(2) {
+    transform: rotateZ(-45deg);
+  }
+}
 .headerNav .js-ContactMenu {
   height: 300px;
   opacity: 1;
@@ -261,25 +278,9 @@ body {
   }
 }
 
-.changeColorBtn {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 0;
-  background: #191919;
-}
-.changeColorBtn img {
-  width: 50%;
-}
-
 .headerNav {
   position: relative;
 }
-
 .headerMenu {
   display: flex;
   justify-content: end;
@@ -292,11 +293,27 @@ body {
 }
 @media (max-width: 600px) {
   .headerMenu {
-    display: none;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 60%;
+    height: 100vh;
+    background: #000000e6;
+    color: #fafafa;
+    border-radius: 0 50px 50px 0;
+    transform: translateX(-100vw);
+    transition: transform 0.5s ease;
+  }
+}
+@media (max-width: 600px) and (prefers-color-scheme: dark) {
+  .headerMenu {
+    background: #ffffffe6;
+    color: #191919;
   }
 }
 .headerMenu li {
-  height: 0;
   font-size: 20px;
   letter-spacing: 2px;
 }
@@ -310,6 +327,23 @@ body {
 .headerMenu li:nth-child(3):hover {
   height: 50px;
   background: #000;
+}
+@media (max-width: 600px) {
+  .headerMenu li {
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 50px;
+  }
+  .headerMenu li:nth-child(1) {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+  .headerMenu li:nth-child(3) {
+    margin-right: 0;
+  }
+  .headerMenu li:nth-child(3):hover {
+    background: #000;
+  }
 }
 .headerMenu li a {
   color: inherit;
@@ -325,8 +359,46 @@ body {
 }
 @media (max-width: 600px) {
   .hamburgerBtn {
-    position: absolute;
+    z-index: 10;
+    position: fixed;
+    top: 30px;
+    right: 30px;
     display: block;
+    width: 34px;
+    height: 27px;
+  }
+}
+@media (max-width: 600px) and (prefers-color-scheme: dark) {
+  .hamburgerBtn {
+    color: #191919;
+  }
+}
+@media (max-width: 600px) {
+  .hamburgerBtn span {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #191919;
+    transition: transform 0.5s ease;
+  }
+}
+@media (max-width: 600px) and (prefers-color-scheme: dark) {
+  .hamburgerBtn span {
+    background: #fafafa;
+  }
+}
+@media (max-width: 600px) {
+  .hamburgerBtn span:nth-of-type(1) {
+    top: 0;
+    transform-origin: top left;
+  }
+}
+@media (max-width: 600px) {
+  .hamburgerBtn span:nth-of-type(2) {
+    bottom: 0;
+    transform-origin: bottom left;
   }
 }
 
@@ -362,8 +434,8 @@ body {
 }
 @media (max-width: 600px) {
   .title-content {
-    margin-top: 0vh;
-    padding-top: 0;
+    margin-top: 0;
+    padding-top: 35vh;
   }
 }
 .title-content p {
@@ -558,10 +630,32 @@ body {
     border-bottom: 6px solid #fafafa;
   }
 }
+@media (max-width: 1024px) {
+  .skill .skill_openButton {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_openButton {
+    width: 30px;
+    height: 30px;
+  }
+}
 .skill .skill_list1 {
   position: relative;
   overflow: hidden;
   margin-top: 100px;
+}
+@media (max-width: 1024px) {
+  .skill .skill_list1 {
+    margin-top: 75px;
+  }
+}
+@media (max-width: 600px) {
+  .skill .skill_list1 {
+    margin-top: 50px;
+  }
 }
 .skill .skill_list1 h3 {
   text-align: center;
@@ -593,10 +687,17 @@ body {
     width: 80%;
   }
 }
+@media (max-width: 1024px) {
+  .skill .skill_list1 .skill_boxes {
+    margin-top: 75px;
+  }
+}
 @media (max-width: 600px) {
   .skill .skill_list1 .skill_boxes {
     gap: 0px;
+    row-gap: 50px;
     width: 100%;
+    margin-top: 50px;
   }
 }
 .skill .skill_list1 .skill_boxes .skill_box {
@@ -624,6 +725,13 @@ body {
     gap: 0;
     width: 21%;
   }
+  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+    @supports not (translate: none) {
+      .skill .skill_list1 .skill_boxes .skill_box {
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
 .skill .skill_list1 .skill_boxes .skill_box picture {
   width: 75px;
@@ -636,6 +744,7 @@ body {
 @media (max-width: 600px) {
   .skill .skill_list1 .skill_boxes .skill_box picture {
     width: 50px;
+    margin-bottom: 20px;
   }
 }
 .skill .skill_list1 .skill_boxes .skill_box p {
@@ -649,6 +758,7 @@ body {
 @media (max-width: 600px) {
   .skill .skill_list1 .skill_boxes .skill_box p {
     width: 50px;
+    margin-bottom: 20px;
   }
 }
 .skill .skill_list1 .skill_boxes .skill_box p img {

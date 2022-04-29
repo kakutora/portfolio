@@ -2,12 +2,27 @@ import {
     SpanWrap
 } from './modules/SpanWrap.js';
 
-import {
-    vantaDark,
-    vantaLight
-} from './modules/colorModeChanger.js';
+
 
 const TextWave = document.querySelectorAll('.a-TextWave');
+const skill_openBtn = document.querySelector('.skill_openButton');
+const skill_slideAnimation = document.querySelector('.skill_slide');
+const ContactBtn = document.querySelector('.ContactBtn');
+const ContactMenu = document.querySelector('.ContactMenu');
+const hamburgerBtn = document.querySelector('.hamburgerBtn');
+const headerMenu = document.querySelector('.headerMenu');
+
+const vantaDark = function () {
+    document.querySelector('#bg-animation-light').style.display = 'none';
+    document.querySelector('#bg-animation-dark').style.display = 'block';
+};
+
+const vantaLight = function () {
+    document.querySelector('#bg-animation-dark').style.display = 'none';
+    document.querySelector('#bg-animation-light').style.display = 'block';
+};
+
+
 
 window.addEventListener('DOMContentLoaded', Wave());
 
@@ -68,15 +83,12 @@ async function Wave() {
 
 
 
-document.querySelector('.skill_openButton').addEventListener('click', () => {
-    document.querySelector('.skill_slide').classList.toggle('js-skill_slide');
-    document.querySelector('.skill_openButton').classList.toggle('js-skill_openButton');
+skill_openBtn.addEventListener('click', () => {
+    skill_slideAnimation.classList.toggle('js-skill_slide');
+    skill_openBtn.classList.toggle('js-skill_openButton');
 });
 
 
-
-const ContactBtn = document.querySelector('.ContactBtn');
-const ContactMenu = document.querySelector('.ContactMenu');
 
 ContactBtn.addEventListener('mouseover', () => {
     ContactMenu.classList.add('js-ContactMenu');
@@ -85,7 +97,6 @@ ContactBtn.addEventListener('mouseover', () => {
 ContactBtn.addEventListener('mouseleave', () => {
     ContactMenu.classList.remove('js-ContactMenu');
 });
-
 
 
 
@@ -104,4 +115,11 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
     } else {
         vantaLight();
     }
+});
+
+
+
+hamburgerBtn.addEventListener('click', () => {
+    headerMenu.classList.toggle('js-headerMenu');
+    hamburgerBtn.classList.toggle('js-hamburgerBtn');
 });
